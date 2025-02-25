@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Market</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="container" style="display: none;">
+        <div class="market-container">
+            <!-- Sol Sidebar -->
+            <div class="market-sidebar">
+                <div class="sidebar-header">
+                    <i class="fa-solid fa-store"></i>
+                    <h2>Black Market</h2>
+                </div>
+                <div class="sidebar-categories">
+                    <div class="category active" data-category="all">
+                        <i class="fa-solid fa-grid-2"></i>
+                        <span>Tüm Ürünler</span>
+                    </div>
+                    <div class="category" data-category="weapons">
+                        <i class="fa-solid fa-gun"></i>
+                        <span>Silahlar</span>
+                    </div>
+                    <div class="category" data-category="tools">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <span>Aletler</span>
+                    </div>
+                    <div class="category" data-category="special">
+                        <i class="fa-solid fa-sparkles"></i>
+                        <span>Özel Ürünler</span>
+                    </div>
+                </div>
+                <div class="sidebar-footer">
+                    <div class="player-info">
+                        <div class="player-money">
+                            <i class="fa-solid fa-sack-dollar"></i>
+                            <span>$0</span>
+                        </div>
+                        <div class="player-card">
+                            <i class="fa-solid fa-credit-card"></i>
+                            <span>Black Card</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ana İçerik -->
+            <div class="market-content">
+                <div class="content-header">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Ürün ara...">
+                    </div>
+                    <div class="close-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="content-title">
+                    <h1>Kara Borsa Marketi</h1>
+                    <p>Güvenilir ve gizli alışverişin adresi</p>
+                </div>
+                <div class="items-container">
+                    <div class="item-card">
+                        <div class="item-category-tag weapons">
+                            <i class="fa-solid fa-gun"></i>
+                            <span>Silah</span>
+                        </div>
+                        <div class="item-image">
+                            <img src="nui://ox_inventory/web/images/WEAPON_COMBATPISTOL.png" alt="Combat Pistol">
+                        </div>
+                        <div class="item-info">
+                            <h3>Combat Pistol</h3>
+                            <p>15,000</p>
+                        </div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-category-tag weapons">
+                            <i class="fa-solid fa-gun"></i>
+                            <span>Silah</span>
+                        </div>
+                        <div class="item-image">
+                            <img src="nui://ox_inventory/web/images/WEAPON_SMG.png" alt="SMG">
+                        </div>
+                        <div class="item-info">
+                            <h3>SMG</h3>
+                            <p>25,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ürün Detay Modal -->
+            <div class="item-modal" style="display: none;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Ürün Detayı</h2>
+                        <div class="modal-close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="item-preview">
+                            <div class="item-image">
+                                <img src="nui://ox_inventory/web/images/WEAPON_COMBATPISTOL.png" alt="Combat Pistol">
+                            </div>
+                            <div class="item-details">
+                                <h3 class="item-name">Combat Pistol</h3>
+                                <p class="item-price">$15,000</p>
+                                <div class="item-quantity">
+                                    <button class="qty-btn minus">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </button>
+                                    <input type="number" value="1" min="1" max="100">
+                                    <button class="qty-btn plus">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </div>
+                                <button class="buy-btn">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    Satın Al
+                                </button>
+                            </div>
+                        </div>
+                        <div class="item-description">
+                            <h4>Ürün Açıklaması</h4>
+                            <p>Bu ürün hakkında detaylı bilgi...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 
